@@ -1,13 +1,13 @@
 {
   "name": "automationjsproject",
-  "type": "module",
+  "type": "commonjs",
   "version": "1.0.0",
   "description": "EPAM automation JS course",
   "main": "index.js",
   "scripts": {
     "test": "mocha 'test/**/*.spec.js'",
     "coverage": "c8 npm test",
-    "lint": "eslint ./ --fix"
+    "lint": "eslint ./"
   },
   "keywords": [],
   "author": "lina_h64@hotmail.com",
