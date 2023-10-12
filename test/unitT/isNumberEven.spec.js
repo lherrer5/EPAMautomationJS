@@ -60,9 +60,32 @@ describe('isNumberEven positive test', () => {
     expect(validationResults).to.be.equal(false);
   });
 
-  it('should return false when provided element is not an array', () => {
+  it('should return an error when provided element is not an array', () => {
     expect(() => {
       validator.isAllNumbers(4);
     }).to.throw('[4] is not an array');
+  });
+
+  it('should return true when provided element is an integer', () => {
+    const validationResults = validator.isInteger(200);
+    expect(validationResults).to.be.equal(true);
+  });
+
+  it('should return false when provided element is an integer', () => {
+    const validationResults = validator.isInteger(8.5);
+    /* eslint-disable no-unused-expressions */
+    expect(validationResults).to.be.false;
+  });
+
+  it('should return an error when provided element is not a number', () => {
+    expect(() => {
+      validator.isInteger('lina');
+    }).to.throw('[lina] is not a number');
+  });
+
+  it('should return an error when provided element is empty', () => {
+    expect(() => {
+      validator.isInteger();
+    }).to.throw(Error);
   });
 });
