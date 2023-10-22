@@ -8,16 +8,18 @@
     "test": "mocha 'test/**/*.spec.js'",
     "coverage": "c8 npm test",
     "lint": "eslint ./ --fix",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run config/wdio.conf.js"
   },
   "keywords": [],
   "author": "lina_h64@hotmail.com",
   "license": "ISC",
   "devDependencies": {
-    "@wdio/cli": "^8.19.0",
-    "@wdio/local-runner": "^8.19.0",
-    "@wdio/mocha-framework": "^8.19.0",
-    "@wdio/spec-reporter": "^8.19.0"
+    "@wdio/cli": "^8.20.2",
+    "@wdio/local-runner": "^8.20.0",
+    "@wdio/mocha-framework": "^8.20.0",
+    "@wdio/spec-reporter": "^8.20.0",
+    "chromedriver": "^118.0.1",
+    "mocha": "^10.2.0"
   },
   "directories": {
     "test": "test"
