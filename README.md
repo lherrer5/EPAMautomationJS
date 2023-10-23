@@ -27,6 +27,9 @@
     1.    Add scenario that utilizes execute() command
     2.    Add scenario that utilizes waitUntil() command
     3.    Add scenario that utilizes browser actions
+            doubleClick()
+            dragAndDrop()
+            moveTo()
     BONUS
     4.    Add scenario that works with cookies and/or local storage
 
