@@ -5,9 +5,7 @@
   "description": "EPAM automation JS course",
   "main": "index.js",
   "scripts": {
-    "test": "mocha 'test/**/*.spec.js'",
-    "coverage": "c8 npm test",
-    "lint": "eslint ./ --fix",
+    "test":"wdio run config/wdio.conf.js",
     "wdio": "wdio run config/wdio.conf.js"
   },
   "keywords": [],
