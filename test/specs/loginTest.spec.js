@@ -1,4 +1,4 @@
-import { expect, browser, $ } from '@wdio/globals'
+const { expect, browser, $ } = require ('@wdio/globals');
 
 
 // EXAMPLE
