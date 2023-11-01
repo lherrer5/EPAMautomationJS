@@ -1,7 +1,7 @@
 const LoginPage = require('../pageobjects/login.page');
 
 describe('Search Module Test Suite', () => {
-    beforeEach(async () => {
+    before(async () => {
         await LoginPage.open();
         await LoginPage.login('lina_h64', 'Lina2023@');
     });
@@ -27,4 +27,30 @@ describe('Search Module Test Suite', () => {
 
         expect(await searchResult).toHaveTextContaining('Addy Osmani');
     });
+
+    it('should open the book details page and verify the book title', async () => {
+        const bookLink = await browser.$('a[href="/books?book=9781449331818"]');
+    
+        await browser.waitUntil(async () => {
+            return bookLink.isExisting();
+        }, {
+            timeout: 5000,
+            timeoutMsg: 'Book link not available after waiting'
+        });
+    
+        await bookLink.click();
+
+        const bookTitle = await $('#userName-value');
+        
+        await browser.waitUntil(async () => {
+            return bookTitle.isExisting();
+        }, {
+            timeout: 5000,
+            timeoutMsg: 'Book title is not present'
+        });
+
+        expect(await bookTitle).toHaveTextContaining('Learning JavaScript Design Patterns');
+    });
+    
 });
+
