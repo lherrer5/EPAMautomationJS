@@ -50,10 +50,33 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
-        browserName: 'chrome'
-    }],
-
+    // capabilities: [
+    //     {
+    //         maxInstances: 5,
+    //         browserName: 'chrome',
+    //         acceptInsecureCerts: true,
+    //     },
+    //     {
+    //         maxInstances: 5,
+    //         browserName: 'MicrosoftEdge',
+    //         acceptInsecureCerts: true,
+    //     },
+    //     {
+    //         maxInstances: 5,
+    //         browserName: 'firefox',
+    //         acceptInsecureCerts: true,
+    //     },
+    // ],
+    capabilities: [
+        {
+            maxInstances: 5,
+            browserName: 'MicrosoftEdge',
+            acceptInsecureCerts: true,
+        },
+    ],
+    // capabilities: [{
+    //     browserName: 'chrome'
+    // }],
     //
     // ===================
     // Test Configurations
@@ -101,7 +124,9 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    //services: ['chromedriver'],
+    services: ['edgedriver'],
+    //services: ['chromedriver', 'edgedriver', 'geckodriver'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -110,7 +135,7 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,

@@ -16,8 +16,10 @@
     "@wdio/mocha-framework": "^8.20.0",
     "@wdio/spec-reporter": "^8.20.0",
     "chromedriver": "^118.0.1",
+    "mocha": "^10.2.0",
     "wdio-chromedriver-service": "^8.1.1",
-    "mocha": "^10.2.0"
+    "wdio-edgedriver-service": "^3.0.3",
+    "wdio-geckodriver-service": "^5.0.2"
   },
   "directories": {
     "test": "test"

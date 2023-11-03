@@ -1,4 +1,9 @@
-# EPAMautomationJS
+## EPAMautomationJS
+
+# NOTE: 
+To execute task 1, you must uncomment the code and comment task 2, and vice versa.
+Due to the Chrome browser update, the chromedriver version (^119.0.1) is not available in the npm package, so the browser was changed to EDGE.
+To run the tests use the **npm run wdio command**
 
 1) HOME TASK _Introduction to WebdriverIO
     1. Create new branch in your empty repository and call it e.g. /ui_tests
